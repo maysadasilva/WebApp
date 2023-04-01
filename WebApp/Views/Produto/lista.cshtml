@@ -1,0 +1,91 @@
+﻿
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>Lista de Produtos</h2>
+            </div>
+            
+            <div class="card-body">
+                <form action="/Produto/Pesquisa" method="get"></form>
+                <div class="row"><!--orgniza dentro do card uma linha com 12 divisões-->
+                    <div class="col-2">
+                        <a href="/Produto/Cadastrar" class="btn btn-outline-success">Nome Produto</a>
+                    </div>
+                    <div class="col-4">
+                        <select name="filtro" class="form-control">
+                           <option value="0">Todas Opções</option>
+                           <option value="id">Por Código</option>
+                           <option value="nome">Por Nome</option>
+                           <option value ="qtd">Por qtd</option>
+                        </select>
+                    </div>
+
+                    <div class="col-4">
+                        <input type="text" name="busca" class="form-control"/>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary">Pesquisar</button>
+                    </div>
+
+                </div>
+        
+
+
+                <table class="table table-striped"><!--faz uma cor sim ou cor não-->
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Qtd em estoque</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mouse Gamer</td>
+                            <td>150</td>
+                            <td>
+                                <a href="/Produto/Editar/1" class="btn btn-warning">Editar</a>
+                                <a href="/Produto/Excluir/1" class="btn btn-danger">Excluir</a>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Pen-drive</td>
+                            <td>150</td>
+                            <td>
+                                <a href="/Produto/Editar/2" class="btn btn-warning">Editar</a>
+                                <a href="/Produto/Excluir/2" class="btn btn-danger">Excluir</a>
+                            </td>
+
+
+                        <tr>
+                            <td>3</td>
+                            <td>Fichário</td>
+                            <td>250</td>
+                            <td>
+                                <a href="/Produto/Editar/3" class="btn btn-warning">Editar</a>
+                                <a href="/Produto/Excluir/3" class="btn btn-danger">Excluir</a>
+                            </td>
+
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

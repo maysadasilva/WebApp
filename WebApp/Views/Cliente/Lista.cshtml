@@ -3,3 +3,94 @@
 *@
 @{
 }
+
+<div class="rom">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">Lista de Clientes</div>
+        </div>
+
+        <div class="card-body">
+            <form action="/Cliente/Lista" method="get"></form>
+            <div class="row">
+                <div class="col-2">
+                    <a href="/Cliente/Lista" class="btn btn-outline-success">Nome Cliente</a>
+                </div>
+
+                <div class="col-4">
+                    <select name="filtro" class="form-control">
+                        <option value="0">Todas as opções</option>
+                        <option value="id">Por código</option>
+                        <option value="nome">Por nome</option>
+                        <option value="endereco">Endereço</option>
+                    </select>
+                </div>
+
+                <div class="col-4">
+                    <input type="text" name="busca" class="form-control"/>
+                </div>
+
+                <div class="col-2">
+                    <button class="btn btn-primary">Pesquisar</button>
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Endereço</th>
+                        </tr>
+                    </thead>
+
+                    <tdbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Maria</td>
+                            <td>Antônio Albino</td>
+                            <td>
+                                <a href="/Cliente/Editar1" class="btn btn-warning">Editar</a>
+                                <a href="/Cliente/Excluir1" class="btn btn-danger">Excluir</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>José</td>
+                            <td>Campos Salles</td>
+                            <td>
+                                <a href="/Cliente/Editar2" class="btn btn-warning">Editar</a>
+                                <a href="/Cliente/Excluir2" class=btn" btn-danger"Excluir></a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>Carlos</td>
+                            <td>Centro</td>
+                            <td>
+                                <a href="/Cliente/Editar3" class="btn btn-warning">Editar</a>
+                                <a href="/Cliente/Excluir3" class="btn btn-danger">Excluir</a>
+                            </td>
+                        </tr>
+
+
+                    </tdbody>
+
+
+
+                </table>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+</div>

@@ -1,8 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<WebApp.Models.ClientesModel>
 
 <div class="rom">
     <div class="col-12">
@@ -11,16 +7,16 @@
         </div>
 
         <div class="card-body">
-            <form action="/Cliente/Lista" method="get"></form>
+            <form action="/Cliente/Cadastro" method="get"></form>
             <div class="row">
                 <div class="col-2">
-                    <a href="/Cliente/Lista" class="btn btn-outline-success">Nome Cliente</a>
+                    <a href="/Cliente/Cadastro" class="btn btn-outline-success">Novo Cliente</a>
                 </div>
 
                 <div class="col-4">
                     <select name="filtro" class="form-control">
                         <option value="0">Todas as opções</option>
-                        <option value="id">Por código</option>
+                        <option value="0">Por código</option>
                         <option value="nome">Por nome</option>
                         <option value="endereco">Endereço</option>
                     </select>
@@ -37,45 +33,27 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Código</th>
+                            <th>id</th>
                             <th>Nome</th>
-                            <th>Endereço</th>
+                            <th>16333569</th>
                         </tr>
                     </thead>
 
-                    <tdbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Maria</td>
-                            <td>Antônio Albino</td>
-                            <td>
-                                <a href="/Cliente/Editar1" class="btn btn-warning">Editar</a>
-                                <a href="/Cliente/Excluir1" class="btn btn-danger">Excluir</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>José</td>
-                            <td>Campos Salles</td>
-                            <td>
-                                <a href="/Cliente/Editar2" class="btn btn-warning">Editar</a>
-                                <a href="/Cliente/Excluir2" class="btn btn-danger"Excluir></a>
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>2</td>
-                            <td>Carlos</td>
-                            <td>Centro</td>
-                            <td>
-                                <a href="/Cliente/Editar3" class="btn btn-warning">Editar</a>
-                                <a href="/Cliente/Excluir3" class="btn btn-danger">Excluir</a>
-                            </td>
-                        </tr>
-
-
-                    </tdbody>
+                    <tbody>
+                        @foreach (var cliente in Model)
+                        {
+                            <tr>
+                                <td>@cliente.Id</td>
+                                <td>@cliente.Nome</td>
+                                <td>@cliente.Telefone</td>
+                                <td>
+                                    <a href="/Cliente/Editar1" class="btn btn-warning">Editar</a>
+                                    <a href="/Cliente/Excluir1" class="btn btn-danger">Excluir</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                  
 
 
 

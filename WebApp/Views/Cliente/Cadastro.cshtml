@@ -1,4 +1,4 @@
-﻿
+﻿@model WebApp.Models.ClientesModel
 <div class="row">
     <div class="col-4">
         <div class="card">
@@ -8,37 +8,21 @@
 
 
             <div class="card-body">
-                <form action="/Cliente/Cadastro" method="post">
-                    <label>Id</label>
-                    <input type="number" name="ID cliente" class="form-control"/>
-                    <br/>
-                    
+                <form action="/Cliente/SalvarDados" method="post">
+                   
                     <label>Nome</label>
                     <input type="text" name="Nome" class="form-control" />
                     <br />
 
-                    <label>Endereço</label>
-                    <input type="text" name="Endereco" class="form-control" />
+                    <label>Telefone</label>
+                    <input type="tel" name="Telefone" class="form-control" />
                     <br />
                     <button type="submit" class="btn btn-info">Cadastrar Cliente</button>
                 </form>
 
             </div>
-        
+
 
         </div>
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
 </div>
